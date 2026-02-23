@@ -15,11 +15,20 @@ position = Vector2(561, 418)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1557799968]
 shape = SubResource("WorldBoundaryShape2D_ujq3c")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2110908131]
+[node name="Box" type="RigidBody2D" parent="." unique_id=2110908131]
 position = Vector2(544, -16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=2138156908]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box" unique_id=2138156908]
 shape = SubResource("RectangleShape2D_ro7pi")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1983016127]
+[node name="Sprite2D" type="Sprite2D" parent="Box" unique_id=1983016127]
 texture = ExtResource("1_f0jl8")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1091909349]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=122722032]
+modulate = Color(0.1493276, 0.5730493, 9.62615e-07, 1)
+scale = Vector2(0.5, 1.2)
+texture = ExtResource("1_f0jl8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1683447143]
