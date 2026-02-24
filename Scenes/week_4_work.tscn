@@ -11,7 +11,7 @@ size = Vector2(64, 157)
 size = Vector2(354, 369.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51v8d"]
-size = Vector2(1183.625, 130.75)
+size = Vector2(2030.4531, 130.75)
 
 [node name="Week 4 Work" type="Node2D" unique_id=1687450955]
 
