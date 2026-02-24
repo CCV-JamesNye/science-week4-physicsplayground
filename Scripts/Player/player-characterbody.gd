@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var state_label: Label = $StateLabel
+
 # Determines how fast the Player will move
 var speed : float = 350
 @export var gravity : float = 980.0
@@ -12,6 +14,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	state_label.text = str(velocity)
 	pass
 
 # Allows the Player to interact with physics
