@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kgvsq6hhfwf3"]
 
 [ext_resource type="Texture2D" uid="uid://c27wnotxv0qeo" path="res://icon.svg" id="1_f0jl8"]
+[ext_resource type="Script" uid="uid://dw1ochyboqt0i" path="res://Scripts/Player/player_movement.gd" id="2_ujq3c"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ujq3c"]
 
@@ -29,6 +30,8 @@ texture = ExtResource("1_f0jl8")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1091909349]
 position = Vector2(328, 255)
+collision_layer = 2
+script = ExtResource("2_ujq3c")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=122722032]
 modulate = Color(0.1493276, 0.5730493, 9.62615e-07, 1)
