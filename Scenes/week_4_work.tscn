@@ -11,10 +11,13 @@ size = Vector2(132, 136)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0jl8"]
 size = Vector2(64, 157)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujq3c"]
+radius = 68.117546
+
 [node name="Week 4 Work" type="Node2D" unique_id=1687450955]
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1356667748]
-position = Vector2(561, 418)
+position = Vector2(561, 478)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1557799968]
 shape = SubResource("WorldBoundaryShape2D_ujq3c")
@@ -29,7 +32,7 @@ shape = SubResource("RectangleShape2D_ro7pi")
 texture = ExtResource("1_f0jl8")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1091909349]
-position = Vector2(328, 255)
+position = Vector2(313, 119)
 collision_layer = 2
 script = ExtResource("2_ujq3c")
 
@@ -42,3 +45,10 @@ texture = ExtResource("1_f0jl8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1683447143]
 position = Vector2(0, -77.5)
 shape = SubResource("RectangleShape2D_f0jl8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2082189753]
+position = Vector2(836, 279)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=734424231]
+shape = SubResource("CircleShape2D_ujq3c")
