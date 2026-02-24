@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ro7pi"]
 size = Vector2(132, 136)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0jl8"]
+size = Vector2(64, 157)
+
 [node name="Week 4 Work" type="Node2D" unique_id=1687450955]
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1356667748]
@@ -25,10 +28,14 @@ shape = SubResource("RectangleShape2D_ro7pi")
 texture = ExtResource("1_f0jl8")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1091909349]
+position = Vector2(328, 255)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=122722032]
 modulate = Color(0.1493276, 0.5730493, 9.62615e-07, 1)
+position = Vector2(0, -77)
 scale = Vector2(0.5, 1.2)
 texture = ExtResource("1_f0jl8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1683447143]
+position = Vector2(0, -77.5)
+shape = SubResource("RectangleShape2D_f0jl8")
