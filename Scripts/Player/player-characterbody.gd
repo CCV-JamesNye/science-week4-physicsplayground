@@ -26,5 +26,5 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
 	
-	velocity = direction.normalized() * speed
+	velocity.x = direction.normalized().x * speed
 	move_and_slide()
