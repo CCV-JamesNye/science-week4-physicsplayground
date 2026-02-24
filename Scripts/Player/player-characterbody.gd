@@ -5,8 +5,7 @@ extends CharacterBody2D
 # Determines how fast the Player will move
 var speed : float = 350
 @export var gravity : float = 980.0
-
-
+@export var jump_force : float = -400
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,3 +32,7 @@ func _physics_process(delta: float) -> void:
 	
 	velocity.x = direction.normalized().x * speed
 	move_and_slide()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("jump"):
+		velocity.y = jump_force
