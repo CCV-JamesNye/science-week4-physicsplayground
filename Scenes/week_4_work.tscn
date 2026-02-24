@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kgvsq6hhfwf3"]
 
 [ext_resource type="Texture2D" uid="uid://c27wnotxv0qeo" path="res://icon.svg" id="1_f0jl8"]
-[ext_resource type="Script" uid="uid://dw1ochyboqt0i" path="res://Scripts/Player/player_movement.gd" id="2_ujq3c"]
+[ext_resource type="Script" uid="uid://b3sij4sf16yjt" path="res://Scripts/Player/player-characterbody.gd" id="2_ujq3c"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ujq3c"]
 
