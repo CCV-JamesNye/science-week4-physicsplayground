@@ -3,15 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://c27wnotxv0qeo" path="res://icon.svg" id="1_f0jl8"]
 [ext_resource type="Script" uid="uid://b3sij4sf16yjt" path="res://Scripts/Player/player-characterbody.gd" id="2_ujq3c"]
 [ext_resource type="Script" uid="uid://bh2u451k52t38" path="res://Scripts/World/kill_box.gd" id="3_ro7pi"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/platform1.tscn" id="4_51v8d"]
+[ext_resource type="PackedScene" uid="uid://c5s3d6e7xs8xq" path="res://Scenes/Platforms/platform2.tscn" id="5_31e2x"]
+[ext_resource type="PackedScene" uid="uid://sch8coji8x8l" path="res://Scenes/Platforms/platform3.tscn" id="6_c82qu"]
+[ext_resource type="PackedScene" uid="uid://bq4wp5m40n0gl" path="res://Scenes/Platforms/platform4.tscn" id="7_j42m0"]
+[ext_resource type="PackedScene" uid="uid://b61a202l5mk37" path="res://Scenes/Platforms/goalisland.tscn" id="8_g3bu7"]
+[ext_resource type="Script" uid="uid://cgyr1ku07h4ys" path="res://Scripts/World/goal.gd" id="9_j42m0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0jl8"]
 size = Vector2(64, 157)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujq3c"]
-size = Vector2(354, 369.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51v8d"]
-size = Vector2(2030.4531, 130.75)
+size = Vector2(7708.3066, 130.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3bu7"]
+size = Vector2(63, 64.5)
 
 [node name="Week 4 Work" type="Node2D" unique_id=1687450955]
 
@@ -37,16 +43,7 @@ offset_right = 19.0
 offset_bottom = -165.0
 text = "State"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=644471663]
-position = Vector2(203, 442)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=323337224]
-scale = Vector2(2.75, 2.8828125)
-texture = ExtResource("1_f0jl8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1064214058]
-position = Vector2(-1, 1)
-shape = SubResource("RectangleShape2D_ujq3c")
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=407241448]
 
 [node name="KillBox" type="Area2D" parent="." unique_id=1649416360]
 position = Vector2(593, 703)
@@ -56,3 +53,33 @@ script = ExtResource("3_ro7pi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox" unique_id=273188312]
 shape = SubResource("RectangleShape2D_51v8d")
+
+[node name="Platform1" parent="." unique_id=1763527828 instance=ExtResource("4_51v8d")]
+position = Vector2(203, 435)
+
+[node name="Platform2" parent="." unique_id=1413167635 instance=ExtResource("5_31e2x")]
+position = Vector2(823, 291)
+
+[node name="Platform3" parent="." unique_id=1809906864 instance=ExtResource("5_31e2x")]
+position = Vector2(1350, 171)
+
+[node name="Platform4" parent="." unique_id=143459075 instance=ExtResource("6_c82qu")]
+position = Vector2(1843, 519)
+
+[node name="Platform5" parent="." unique_id=2016428513 instance=ExtResource("7_j42m0")]
+position = Vector2(2358, 357)
+
+[node name="Platform6" parent="." unique_id=172108800 instance=ExtResource("7_j42m0")]
+position = Vector2(2828, 281)
+
+[node name="Platform7" parent="." unique_id=898398284 instance=ExtResource("8_g3bu7")]
+position = Vector2(3546, 425)
+
+[node name="Goal" type="Area2D" parent="." unique_id=1062584672]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("9_j42m0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=789802379]
+position = Vector2(3543, 295)
+shape = SubResource("RectangleShape2D_g3bu7")
