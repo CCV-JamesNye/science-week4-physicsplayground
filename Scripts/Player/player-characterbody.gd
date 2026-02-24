@@ -16,9 +16,11 @@ func _process(delta: float) -> void:
 
 # Allows the Player to interact with physics
 func _physics_process(delta: float) -> void:
+	if !is_on_floor():
+		velocity.y += gravity * delta
+	
 	# Stores current direction
 	var direction : Vector2 = Vector2.ZERO
-	velocity.y += gravity * delta
 	
 	# Reads input
 	if Input.is_action_pressed("move_right"):
