@@ -56,5 +56,3 @@ script = ExtResource("3_ro7pi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox" unique_id=273188312]
 shape = SubResource("RectangleShape2D_51v8d")
-
-[connection signal="body_entered" from="KillBox" to="KillBox" method="_on_body_entered"]
