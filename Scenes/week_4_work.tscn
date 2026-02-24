@@ -50,6 +50,8 @@ shape = SubResource("RectangleShape2D_ujq3c")
 
 [node name="KillBox" type="Area2D" parent="." unique_id=1649416360]
 position = Vector2(593, 703)
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("3_ro7pi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox" unique_id=273188312]
