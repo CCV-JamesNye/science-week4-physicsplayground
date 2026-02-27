@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Science - Week 4 - Physics Playground"
+config/name="Game Project 1"
 run/main_scene="uid://kgvsq6hhfwf3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
