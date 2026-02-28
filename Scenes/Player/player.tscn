@@ -22,17 +22,9 @@ region = Rect2(48, 0, 24, 24)
 atlas = ExtResource("2_a3d8c")
 region = Rect2(72, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a3d8c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dey5f"]
 atlas = ExtResource("2_a3d8c")
-region = Rect2(336, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0u5uq"]
-atlas = ExtResource("2_a3d8c")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlvik"]
-atlas = ExtResource("2_a3d8c")
-region = Rect2(72, 0, 24, 24)
+region = Rect2(288, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gk6dx"]
 atlas = ExtResource("2_a3d8c")
@@ -74,27 +66,16 @@ animations = [{
 "texture": SubResource("AtlasTexture_dd0ac")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a3d8c")
+"texture": SubResource("AtlasTexture_dey5f")
 }],
-"loop": false,
+"loop": true,
 "name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0u5uq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jlvik")
-}],
-"loop": false,
-"name": &"jump_land",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -132,8 +113,8 @@ shape = SubResource("RectangleShape2D_f0jl8")
 position = Vector2(1, -38)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_0u5uq")
-animation = &"walk"
-frame_progress = 0.7556016
+animation = &"jump"
+autoplay = "idle"
 
 [node name="StateLabel" type="Label" parent="." unique_id=159879433]
 offset_left = -21.0

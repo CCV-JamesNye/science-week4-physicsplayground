@@ -6,6 +6,7 @@ extends CharacterBody2D
 var speed : float = 350
 @export var gravity : float = 980.0
 @export var jump_force : float = -500
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,6 +30,14 @@ func _physics_process(delta: float) -> void:
 		direction.x += 1
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
+	if direction != Vector2.ZERO:
+		animated_sprite_2d.play("walk")
+		if direction.x <0:
+			animated_sprite_2d.flip_h = true
+		else:
+			animated_sprite_2d.flip_h = false
+	else:
+		animated_sprite_2d.play("idle")
 	
 	velocity.x = direction.normalized().x * speed
 	move_and_slide()

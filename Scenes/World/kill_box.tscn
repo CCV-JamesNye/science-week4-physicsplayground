@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgvpxauqa08vi"]
 
 [ext_resource type="Script" uid="uid://bh2u451k52t38" path="res://Scripts/World/kill_box.gd" id="1_y2sj0"]
+[ext_resource type="Texture2D" uid="uid://c27wnotxv0qeo" path="res://icon.svg" id="2_3ythi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51v8d"]
 size = Vector2(7708.3066, 130.75)
@@ -12,3 +13,8 @@ script = ExtResource("1_y2sj0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2066299681]
 shape = SubResource("RectangleShape2D_51v8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=281919076]
+modulate = Color(0.97012526, 0.17340407, 5.7756904e-07, 1)
+scale = Vector2(60.554688, 1)
+texture = ExtResource("2_3ythi")
