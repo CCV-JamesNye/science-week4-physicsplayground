@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://qn5chp3lkx48"]
+
+[ext_resource type="Script" uid="uid://b3sij4sf16yjt" path="res://Scripts/Player/player-characterbody.gd" id="1_a3d8c"]
+[ext_resource type="Texture2D" uid="uid://c27wnotxv0qeo" path="res://icon.svg" id="2_xpcdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0jl8"]
+size = Vector2(64, 157)
+
+[node name="Player" type="CharacterBody2D" unique_id=1104298862]
+collision_layer = 2
+script = ExtResource("1_a3d8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940970267]
+modulate = Color(0.1493276, 0.5730493, 9.62615e-07, 1)
+position = Vector2(0, -77)
+scale = Vector2(0.5, 1.2)
+texture = ExtResource("2_xpcdj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=161258004]
+position = Vector2(0, -77.5)
+shape = SubResource("RectangleShape2D_f0jl8")
+
+[node name="StateLabel" type="Label" parent="." unique_id=159879433]
+offset_left = -21.0
+offset_top = -188.0
+offset_right = 19.0
+offset_bottom = -165.0
+text = "State"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1443165126]

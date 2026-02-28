@@ -1,58 +1,21 @@
 [gd_scene format=3 uid="uid://kgvsq6hhfwf3"]
 
-[ext_resource type="Texture2D" uid="uid://c27wnotxv0qeo" path="res://icon.svg" id="1_f0jl8"]
-[ext_resource type="Script" uid="uid://b3sij4sf16yjt" path="res://Scripts/Player/player-characterbody.gd" id="2_ujq3c"]
-[ext_resource type="Script" uid="uid://bh2u451k52t38" path="res://Scripts/World/kill_box.gd" id="3_ro7pi"]
+[ext_resource type="PackedScene" uid="uid://qn5chp3lkx48" path="res://Scenes/Player/player.tscn" id="1_c82qu"]
+[ext_resource type="PackedScene" uid="uid://bgvpxauqa08vi" path="res://Scenes/World/kill_box.tscn" id="2_c82qu"]
 [ext_resource type="PackedScene" uid="uid://btvwe6pw6mldt" path="res://Scenes/Platforms/platform1.tscn" id="4_51v8d"]
 [ext_resource type="PackedScene" uid="uid://c5s3d6e7xs8xq" path="res://Scenes/Platforms/platform2.tscn" id="5_31e2x"]
 [ext_resource type="PackedScene" uid="uid://sch8coji8x8l" path="res://Scenes/Platforms/platform3.tscn" id="6_c82qu"]
 [ext_resource type="PackedScene" uid="uid://bq4wp5m40n0gl" path="res://Scenes/Platforms/platform4.tscn" id="7_j42m0"]
 [ext_resource type="PackedScene" uid="uid://b61a202l5mk37" path="res://Scenes/Platforms/goalisland.tscn" id="8_g3bu7"]
-[ext_resource type="Script" uid="uid://cgyr1ku07h4ys" path="res://Scripts/World/goal.gd" id="9_j42m0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0jl8"]
-size = Vector2(64, 157)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_51v8d"]
-size = Vector2(7708.3066, 130.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3bu7"]
-size = Vector2(63, 64.5)
+[ext_resource type="PackedScene" uid="uid://bkfil080m58sk" path="res://Scenes/World/goal.tscn" id="8_j42m0"]
 
 [node name="Week 4 Work" type="Node2D" unique_id=1687450955]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1091909349]
+[node name="Player" parent="." unique_id=1104298862 instance=ExtResource("1_c82qu")]
 position = Vector2(178, -31)
-collision_layer = 2
-script = ExtResource("2_ujq3c")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=122722032]
-modulate = Color(0.1493276, 0.5730493, 9.62615e-07, 1)
-position = Vector2(0, -77)
-scale = Vector2(0.5, 1.2)
-texture = ExtResource("1_f0jl8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1683447143]
-position = Vector2(0, -77.5)
-shape = SubResource("RectangleShape2D_f0jl8")
-
-[node name="StateLabel" type="Label" parent="Player" unique_id=2100255776]
-offset_left = -21.0
-offset_top = -188.0
-offset_right = 19.0
-offset_bottom = -165.0
-text = "State"
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=407241448]
-
-[node name="KillBox" type="Area2D" parent="." unique_id=1649416360]
+[node name="KillBox" parent="." unique_id=1394673116 instance=ExtResource("2_c82qu")]
 position = Vector2(593, 703)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("3_ro7pi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox" unique_id=273188312]
-shape = SubResource("RectangleShape2D_51v8d")
 
 [node name="Platform1" parent="." unique_id=1763527828 instance=ExtResource("4_51v8d")]
 position = Vector2(203, 435)
@@ -75,11 +38,4 @@ position = Vector2(2828, 281)
 [node name="Platform7" parent="." unique_id=898398284 instance=ExtResource("8_g3bu7")]
 position = Vector2(3546, 425)
 
-[node name="Goal" type="Area2D" parent="." unique_id=1062584672]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("9_j42m0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=789802379]
-position = Vector2(3543, 295)
-shape = SubResource("RectangleShape2D_g3bu7")
+[node name="Goal" parent="." unique_id=1653231998 instance=ExtResource("8_j42m0")]
