@@ -14,7 +14,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	state_label.text = str(is_on_floor())
 	pass
 
 # Allows the Player to interact with physics
