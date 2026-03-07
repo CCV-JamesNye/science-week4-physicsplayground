@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bkivjk8f70srt"]
 
+[ext_resource type="Script" uid="uid://8sf6p623yk1u" path="res://Scripts/UI/main_menu.gd" id="1_5wsvm"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
 bg_color = Color(0.19607843, 0.24313726, 0.69803923, 1)
 corner_radius_top_left = 32
@@ -14,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5wsvm")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1104340340]
 layout_mode = 1
@@ -63,12 +66,12 @@ text = "Disk 1:
 My First Game"
 horizontal_alignment = 1
 
-[node name="Start" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1212574709]
+[node name="Start-Play" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1212574709]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Play"
 
-[node name="Quit" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=555757609]
+[node name="Quit-Eject" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=555757609]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Eject"
