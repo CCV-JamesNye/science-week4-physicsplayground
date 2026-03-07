@@ -116,11 +116,4 @@ sprite_frames = SubResource("SpriteFrames_0u5uq")
 animation = &"jump"
 autoplay = "idle"
 
-[node name="StateLabel" type="Label" parent="." unique_id=159879433]
-offset_left = -21.0
-offset_top = -188.0
-offset_right = 19.0
-offset_bottom = -165.0
-text = "State"
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1443165126]
