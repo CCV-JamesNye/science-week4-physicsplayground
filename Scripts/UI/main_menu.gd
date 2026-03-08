@@ -13,6 +13,5 @@ func _quit_game() -> void:
 	get_tree().quit()
 
 func _start_game() -> void:
-	await SceneTransition.fade_to_black()
 	get_tree().change_scene_to_file("res://Scenes/week_4_work.tscn")
 	pass

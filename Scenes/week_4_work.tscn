@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://kgvsq6hhfwf3"]
 
 [ext_resource type="PackedScene" uid="uid://qn5chp3lkx48" path="res://Scenes/Player/player.tscn" id="1_c82qu"]
-[ext_resource type="Script" uid="uid://cohujaongqe2y" path="res://Scripts/week_4_work.gd" id="1_j42m0"]
 [ext_resource type="PackedScene" uid="uid://bgvpxauqa08vi" path="res://Scenes/World/kill_box.tscn" id="2_c82qu"]
 [ext_resource type="PackedScene" uid="uid://btvwe6pw6mldt" path="res://Scenes/Platforms/platform1.tscn" id="4_51v8d"]
 [ext_resource type="PackedScene" uid="uid://c5s3d6e7xs8xq" path="res://Scenes/Platforms/platform2.tscn" id="5_31e2x"]
@@ -11,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bkfil080m58sk" path="res://Scenes/World/goal.tscn" id="8_j42m0"]
 
 [node name="Week 4 Work" type="Node2D" unique_id=1687450955]
-script = ExtResource("1_j42m0")
 
 [node name="Player" parent="." unique_id=1104298862 instance=ExtResource("1_c82qu")]
 position = Vector2(178, -31)
