@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://bqgwbb7oag88q"]
+[gd_scene format=3 uid="uid://gpsvc4qqmxii"]
 
-[ext_resource type="Script" uid="uid://bs214k3vrtdhl" path="res://Scripts/UI/pause_menu.gd" id="1_rrvs5"]
+[ext_resource type="Script" uid="uid://bs214k3vrtdhl" path="res://Scripts/UI/pause_menu.gd" id="1_jxkuk"]
 
-[node name="Pause Menu" type="CanvasLayer" unique_id=1242080263]
+[node name="Game Over" type="CanvasLayer" unique_id=1242080263]
 process_mode = 3
-script = ExtResource("1_rrvs5")
+script = ExtResource("1_jxkuk")
 
 [node name="Control" type="Control" parent="." unique_id=411148990]
 layout_mode = 3

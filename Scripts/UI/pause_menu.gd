@@ -14,8 +14,11 @@ func _unhandled_input(event: InputEvent) -> void:
 func _show_menu() -> void:
 	visible=true
 	get_tree().paused=true
-	pause_button.pressed.connect(_hide_menu)
+	if !pause_button.pressed.is_connected(_hide_menu): 
+		pause_button.pressed.connect(_hide_menu)
 
 func _hide_menu() -> void:
+	if pause_button.pressed.is_connected(_hide_menu): 
+		pause_button.pressed.disconnect(_hide_menu)
 	visible=false
 	get_tree().paused=false
