@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://dkjm8ivo83p33"]
+[gd_scene format=3 uid="uid://jo1ndgewi8x3"]
 
-[ext_resource type="Script" uid="uid://b7hqt4kkwb6wl" path="res://Scripts/UI/game_over.gd" id="1_jxkuk"]
+[ext_resource type="Script" uid="uid://b7hqt4kkwb6wl" path="res://Scripts/UI/game_over.gd" id="1_wb3u5"]
 
 [node name="Game Over" type="CanvasLayer" unique_id=1242080263]
 process_mode = 3
-script = ExtResource("1_jxkuk")
+script = ExtResource("1_wb3u5")
 
 [node name="Control" type="Control" parent="." unique_id=411148990]
 layout_mode = 3
@@ -41,12 +41,12 @@ theme_override_constants/separation = 209
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=579420181]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "READ ERROR"
+text = "END OF DISK"
 
 [node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=344022344]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "The disc has encountered an error. Please run it again."
+text = "You Win! If you would like to watch this film again, please restart rom the main menu."
 
 [node name="MenuButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=796059730]
 layout_mode = 2

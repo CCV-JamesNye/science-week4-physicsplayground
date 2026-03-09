@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-@onready var state_label: Label = $StateLabel
-
 # Determines how fast the Player will move
 var speed : float = 350
 @export var gravity : float = 980.0
@@ -46,5 +44,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		velocity.y = jump_force
 
 func die () -> void:
-	print("GAME OVER")
-	get_tree().call_deferred('reload_current_scene')
+	pass

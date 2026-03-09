@@ -8,4 +8,6 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		body.die()
+		await SceneTransition.fade_to_black()
+		get_tree().change_scene_to_file("res://Scenes/UI/game_over.tscn")
 	pass # Replace with function body.
